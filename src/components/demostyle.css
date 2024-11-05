@@ -41,9 +41,9 @@
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 14px;
+    padding: 10px;
     z-index: 1000;
-    width: 40vw;
+    width: 30vw;
   }
   
   .dropdown-item {
@@ -61,8 +61,8 @@
   }
   
   .dropdown-item select {
-    width: 100%;
-    padding: 8px;
+    width: 100px;
+    padding: 7px;
     border-radius: 6px;
     border: 1px solid #ddd;
     font-size: 14px;
