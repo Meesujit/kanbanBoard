@@ -9,7 +9,7 @@ import { ReactComponent as CancelledIcon } from '../assets/Cancelled.svg';
 import { ReactComponent as DisplayIcon } from '../assets/Display.svg';
 import { ReactComponent as DownIcon } from '../assets/down.svg';
 import { ReactComponent as UrgeIcon } from '../assets/SVG - Urgent Priority colour.svg'
-import { ReactComponent as UrgeIcongrey } from '../assets/SVG - Urgent Priority grey.svg'
+
 import { ReactComponent as HighIcon } from '../assets/Img - High Priority.svg'
 import { ReactComponent as LowIcon } from '../assets/Img - Low Priority.svg'
 import { ReactComponent as MediumIcon } from '../assets/Img - Medium Priority.svg'
