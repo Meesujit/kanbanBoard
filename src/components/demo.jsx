@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './demostyle.css';
-// import {backlog, todo, inProgress, Done, cancelled} from '../assets/index.js'
+
 import { ReactComponent as BacklogIcon } from '../assets/Backlog.svg';
 import { ReactComponent as TodoIcon } from '../assets/To-do.svg';
 import {ReactComponent as InProgressIcon} from '../assets/in-progress.svg';
@@ -8,14 +8,21 @@ import {ReactComponent as DoneIcon} from '../assets/Done.svg';
 import {ReactComponent as CancelledIcon} from '../assets/Cancelled.svg';
 import {ReactComponent as DisplayIcon} from '../assets/Display.svg';
 import {ReactComponent as DownIcon} from '../assets/down.svg';
-
+import {ReactComponent as UrgeIcon} from '../assets/SVG - Urgent Priority colour.svg'
+import {ReactComponent as UrgeIcongrey} from '../assets/SVG - Urgent Priority grey.svg'
+import {ReactComponent as HighIcon} from '../assets/Img - High Priority.svg'
+import {ReactComponent as LowIcon} from '../assets/Img - Low Priority.svg'
+import {ReactComponent as MediumIcon} from '../assets/Img - Medium Priority.svg'
+import {ReactComponent as NoIcon} from '../assets/No-priority.svg'
+import { ReactComponent as DoIcon  } from '../assets/3 dot menu.svg'
+import {ReactComponent as AddIcons} from '../assets/add.svg'
 
 const priorityMap = {
-  4: { name: 'Urgent', icon: '🔴' },
-  3: { name: 'High', icon: '🟠' },
-  2: { name: 'Medium', icon: '🟡' },
-  1: { name: 'Low', icon: '🟢' },
-  0: { name: 'No priority', icon: '⚪' },
+  4: { name: 'Urgent', icon: <UrgeIcon /> },
+  3: { name: 'High', icon: <HighIcon /> },
+  2: { name: 'Medium', icon: <MediumIcon /> },
+  1: { name: 'Low', icon: <LowIcon /> },
+  0: { name: 'No priority', icon: <NoIcon /> },
 };
 
 const statusMap = {
@@ -103,6 +110,7 @@ const DemoBoard = () => {
   
     return (
       <div className="kanban-board">
+        <div className="navbar">        
         <div className="controls" ref={dropdownRef}>
           <button className="display-button" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <DisplayIcon />
@@ -137,6 +145,7 @@ const DemoBoard = () => {
             </div>
           )}
         </div>
+        </div>
         <div className="columns">
           {Object.entries(groupedAndSortedTickets).map(([group, tickets]) => (
             <div key={group} className="column">
@@ -148,8 +157,12 @@ const DemoBoard = () => {
                   <span className="ticket-count">{tickets.length}</span>
                 </div>
                 <div className="column-actions">
-                  <button className="icon-button">+</button>
-                  <button className="icon-button">⋯</button>
+                  <button className="icon-button">
+                    <AddIcons />
+                  </button>
+                  <button className="icon-button">
+                  <DoIcon />
+                  </button>
                 </div>
               </div>
               {tickets.map((ticket) => (

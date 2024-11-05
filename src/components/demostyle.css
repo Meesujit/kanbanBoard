@@ -4,7 +4,6 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    background-color: #f4f6f8;
   }
   
   .navbar {
@@ -71,19 +70,17 @@
     padding-top: 20px;
   }
   
-  .column {
+  /* .column {
     background-color: #ffffff;
     border-radius: 8px;
     border: 1px solid #ddd;
-  }
+  } */
   
   .column-header {
     padding: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -102,11 +99,9 @@
   }
   
   .ticket-count {
-    background-color: #007bff;
-    color: white;
-    border-radius: 12px;
-    padding: 4px 8px;
-    font-size: 12px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 300;
   }
   
   .column-actions {
@@ -150,8 +145,7 @@
   .user-avatar {
     width: 28px;
     height: 28px;
-    background-color: #007bff;
-    color: white;
+    border: 1px solid rgb(223, 219, 219);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -162,7 +156,7 @@
   
   .card-title {
     margin: 0 0 10px 0;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 600;
     color: #333;
   }
