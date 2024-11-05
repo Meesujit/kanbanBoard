@@ -36,17 +36,23 @@
   
   .dropdown {
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 0;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 14px;
     z-index: 1000;
+    width: 40vw;
   }
   
   .dropdown-item {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
   }
   
   .dropdown-item label {
